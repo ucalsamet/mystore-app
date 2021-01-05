@@ -167,7 +167,7 @@ export default {
             });
           }
         }
-      } else if (value == 2 && products[key].category == "Jackets & Coats") {
+      } else if (value == 2) {
         this.getProducts = [];
         for (let key in products) {
           if (products[key].gender == "women" &&
