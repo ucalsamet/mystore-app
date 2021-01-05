@@ -11,7 +11,7 @@ app.use(
 );
 
 mongoose.connect(
-  "mongodb+srv://samet:samet1998@cluster0.icf29.mongodb.net/storeappnuxt?retryWrites=true&w=majority",
+  process.env.MONGODB_URI,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
