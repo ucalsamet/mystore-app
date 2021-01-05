@@ -3,7 +3,28 @@
     <v-app-bar fixed app class="accent">
       <v-toolbar-title v-text="title" />
       <v-spacer></v-spacer>
-      <v-toolbar-items v-for="(item, i) in items" :key="i">
+        <v-menu offset-y class="hidden-sm-and-up"> 
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="BC524B"
+          dark
+          v-bind="attrs"
+          v-on="on"
+          class="mr-4"
+        >
+          Categories
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item
+           v-for="(item, i) in items" :key="i"
+           link :to="item.path"
+        >
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+      <v-toolbar-items class="hidden-xs-only"  v-for="(item, i) in items" :key="i">
         <v-btn small color="#BC524B" link :to="item.path" class="mr-1">{{
           item.title
         }}</v-btn>
