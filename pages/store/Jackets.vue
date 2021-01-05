@@ -170,7 +170,8 @@ export default {
       } else if (value == 2 && products[key].category == "Jackets & Coats") {
         this.getProducts = [];
         for (let key in products) {
-          if (products[key].gender == "women") {
+          if (products[key].gender == "women" &&
+            products[key].category == "Jackets & Coats") {
             this.getProducts.push({
               _id: products[key]._id,
               title: products[key].title,
