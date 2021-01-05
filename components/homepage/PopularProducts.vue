@@ -8,7 +8,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col md="4" v-for="product in products" :key="product._id">
+      <v-col md="4" v-for="product in products.slice(0,3) || ''" :key="product._id">
         <PopularProduct :product="product"/>
       </v-col>
     </v-row>
