@@ -66,7 +66,7 @@ export default {
   },
   serverMiddleware: [bodyParser.json(), "~/api"],
   env: {
-    firebaseAPIKEY: "AIzaSyC_gSXq1u3ytZ_AK2_gaHIyzKCwXEugpiw"
+    firebaseAPIKEY: "AIzaSyCP8MjIRobwsegCHrZESC--iltF40DRseM"
   },
 
 }
